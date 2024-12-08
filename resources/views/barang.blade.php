@@ -219,7 +219,7 @@
                         </a>
                         @endif
                       </td>
-                    </tr>
+                    </tr>C
                     @endforeach
                   </tbody>
                 </table>

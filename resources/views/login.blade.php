@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/img/apple-icon.png')}}">
   <link rel="icon" type="image/png" href="{{asset('assets/img/icons/swif_logo.png')}}">
   <title>
-      SWIF - Warehouse Management System
+      WIMS - Warehouse Inventory Management System
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -34,11 +34,7 @@
       <div class="page-header min-vh-100">
         <div class="container">
           <div class="row">
-            <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column">
-              <div class="position-relative bg-gradient-primary h-100 d-flex flex-column justify-content-center" style="margin-left:-10%; background-image: url('{{asset('assets/img/bg.png')}}'); background-size: cover;">
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
+            <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-5 me-lg-auto">
               <div class="card card-plain">
                 <div class="card-header">
                   @if (session('success'))
@@ -50,29 +46,33 @@
                           {{ session('danger') }}
                       </div>
                   @endif
-                  <h4 class="font-weight-bolder">Login dulu yuk!</h4>
+                  <h4 class="font-weight-bolder text-center">Log in</h4>
                 </div>
                 <div class="card-body">
                 <form role="form" method="post" action="/signin">
                   @csrf
                     <div class="input-group input-group-outline mb-3">
-                      <label class="form-label">Username</label>
-                      <input type="text" name="uname" required autocomplete="off" class="form-control" aria-label="uname">
+                      <label for="uname" class="form-label">Username</label>
+                      <input type="text" id="uname" name="uname" required autocomplete="off" class="form-control border primary" aria-label="uname">
                     </div>
                     <div class="input-group input-group-outline mb-3">
-                      <label class="form-label">Password</label>
-                      <input type="password" name="password" required autocomplete="off" class="form-control">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" id="password" name="password" required autocomplete="off" class="form-control border-primary">
                     </div>
                     <div class="text-center">
-                      <button type="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">MASUK</button>
+                      <button type="submit" class="btn btn-lg bg-gradient-info btn-lg w-100 mt-4 mb-0">Log in</button>
                     </div>
                   </form>
                 </div>
                 <div class="card-footer text-center pt-0 px-lg-2 px-1">
                   <p class="mb-2 text-sm mx-auto">
-                    Belum punya akun Silahkan hubungi superadministrator!!
+                    Belum punya akun? Silahkan hubungi administrator
                   </p>
                 </div>
+              </div>
+            </div>
+            <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
+              <div class="position-relative bg-gradient-primary h-100 d-flex flex-column justify-content-center" style="margin-right:-10%; background-image: url('{{asset('assets/img/bg2.png')}}'); background-size: cover;">
               </div>
             </div>
           </div>

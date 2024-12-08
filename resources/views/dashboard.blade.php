@@ -65,7 +65,7 @@
             <span class="nav-link-text ms-1">Riwayat Barang</span>
           </a>
         </li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
           <a class="nav-link text-white " href="/pengiriman">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">flight</i>
@@ -83,7 +83,7 @@
             </div>
             <span class="nav-link-text ms-1">Data Staf</span>
           </a>
-        </li>
+        </li>-->
         <li class="nav-item">
           <a class="nav-link text-white " href="#" data-bs-toggle="modal" data-bs-target="#logout">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
